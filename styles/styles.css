@@ -15,13 +15,18 @@ header {
     width: 100%;
     height: 80px;
     padding: 20px 40px;
+    display: flex;
+    align-items: center;
     background-color:crimson;
+}
+
+nav > ul {
+    display: flex;
+    gap: 30px;
 }
 
 nav > ul > li {
     list-style: none;
-    display: inline;
-    margin: 0 30px;
 }
 
 nav > ul > li > a {
@@ -36,6 +41,8 @@ nav > ul > li > a:hover {
     color: crimson; 
     border-radius: 5px;   
 }
+
+
 
 /* boton activo header */
 .active {
@@ -102,6 +109,108 @@ nav > ul > li > a:hover {
     font-size: 18px;
 }
 
+
+.veterinary-section {
+ flex-direction: column;
+ padding: 20px;
+}
+
+
+.veterinaria-img {
+   max-height: 400px;
+   max-width: 400px;
+   border-radius: 1%; 
+}
+
+
+
+
+/* Estilos Veterinaria */
+.veterinaria-1{
+padding-bottom: 30px;
+}
+
+.veterinaria-2{
+padding-bottom: 30px;
+}
+
+.veterinaria-3{
+padding-bottom: 30px;
+}
+
+
+.veterinaria-4{
+padding-bottom: 30px;
+}
+      
+
+
+/* Estilos Tienda */
+
+.container-cards{
+    display: flex;
+    padding: 20px 20px 70px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:20px;
+
+}
+
+.card-tienda {
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.card-tienda-img{
+    max-height: 300px;
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
+}
+
+.card-tienda-text{
+    width: 300px;
+    height: 220px;
+    background-color: rgb(198, 33, 58);
+    border-bottom-left-radius:15px ;
+    border-bottom-right-radius:15px ;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+    
+}
+
+.card-tienda-text h2,p {
+    color: rgb(237, 230, 230);
+    
+}
+
+/* .card-tienda-text p {
+    padding: 15px 0 ;  
+} */
+
+.card-tienda-subtitle {
+    padding: 20px;
+}
+
+.btn-comprar {
+    background-color: whitesmoke;
+    padding: 10px 15px;
+    color: rgb(198, 33, 58);
+    font-weight: bold;
+    border: solid 2px rgb(198, 33, 58);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    background-color: rgb(198, 33, 58);
+    color: whitesmoke;
+    border: solid 2px whitesmoke
+}
+
 /* Estilos footer */
 footer {
     background-color:crimson;
@@ -118,15 +227,24 @@ footer {
 }
 
 .footer-links-box {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
+
+.footer-links-box > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+}
+
 
 .footer-links-box > ul > li {
     padding: 5px 8px;
     text-decoration: none;
     color:whitesmoke;
     text-align: center;
-    display: inline;
+    list-style: none;
 }
 
 .comunidad-img {
@@ -135,4 +253,57 @@ footer {
 
 .podcast-box {
     padding: 20px 40px;
+}
+
+/* Breakpoints */
+
+/* Dispositivos medianos */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    nav > ul {
+        gap: 15px;
+    }
+
+    nav > ul > li > a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size:16px;
+    }
+}
+
+/* Dispositivos pequeños */
+@media screen and (max-width: 480px) {
+    header {
+        height: auto;
+    }
+
+    nav > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav > ul > li > a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    .card-tienda-img {
+        max-height: 250px;
+    }
+
+    .card-tienda-text {
+        width: 250px;
+    }
+
+    .card-tienda-subtitle {
+        text-align: center;
+    }
 }
