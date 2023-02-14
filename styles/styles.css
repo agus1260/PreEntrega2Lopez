@@ -42,8 +42,6 @@ nav > ul > li > a:hover {
     border-radius: 5px;   
 }
 
-
-
 /* boton activo header */
 .active {
     background-color:whitesmoke ;
@@ -52,6 +50,7 @@ nav > ul > li > a:hover {
 }
 
 /* Estilos Home */
+
 .title {
     text-align: center;
     padding: 50px 20px;
@@ -90,7 +89,6 @@ nav > ul > li > a:hover {
     height: 450px;
 }
 
-
 .home-section-c3 img {
     float: right;
 }
@@ -107,43 +105,69 @@ nav > ul > li > a:hover {
     padding: 200px 20px;
     text-align: center;
     font-size: 18px;
+    color: #454545;
 }
-
-
-.veterinary-section {
- flex-direction: column;
- padding: 20px;
-}
-
-
-.veterinaria-img {
-   max-height: 400px;
-   max-width: 400px;
-   border-radius: 1%; 
-}
-
-
-
 
 /* Estilos Veterinaria */
-.veterinaria-1{
-padding-bottom: 30px;
+
+.veterinary-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.veterinaria-2{
-padding-bottom: 30px;
+.veterinaria-total{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.veterinaria-3{
-padding-bottom: 30px;
+.veterinaria {
+    max-width: 620px;
+    padding-bottom: 30px;
 }
 
-
-.veterinaria-4{
-padding-bottom: 30px;
+.veterinaria-img {
+    height: 400px;
+    width: 620px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
-      
 
+.veterinaria p {
+    color: #454545;
+    padding: 10px 10px 0 0;
+}
+
+.veterinaria-text{
+    display:flex;
+    justify-content:space-between;
+    padding-top: 20px;
+}
+
+.veterinaria-text div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-map {
+    background-color:transparent    ;
+    padding: 10px 15px;
+    color: rgb(198, 33, 58);
+    font-weight: bold;
+    border: solid 2px rgb(198, 33, 58);
+    border-radius: 10px;
+    cursor: pointer; 
+}
+
+.btn-map:active {
+    background-color:transparent;
+    color:rgb(141, 15, 34);
+    border: solid 2px rgb(141, 15, 34)
+}
 
 /* Estilos Tienda */
 
@@ -153,13 +177,11 @@ padding-bottom: 30px;
     justify-content: space-around;
     flex-wrap: wrap;
     gap:20px;
-
 }
 
 .card-tienda {
     border: none;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
@@ -179,17 +201,11 @@ padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between
-    
 }
 
 .card-tienda-text h2,p {
     color: rgb(237, 230, 230);
-    
 }
-
-/* .card-tienda-text p {
-    padding: 15px 0 ;  
-} */
 
 .card-tienda-subtitle {
     padding: 20px;
@@ -211,7 +227,22 @@ padding-bottom: 30px;
     border: solid 2px whitesmoke
 }
 
+/* Estilos Comunidad */
+
+.comunidad-section {
+    padding: 20px
+}
+
+.comunidad-section p {
+    color: #454545;
+}
+
+.podcast-box {
+    padding: 20px 40px;
+}
+
 /* Estilos footer */
+
 footer {
     background-color:crimson;
     padding: 50px 20px
@@ -238,21 +269,12 @@ footer {
     max-width: 600px;
 }
 
-
 .footer-links-box > ul > li {
     padding: 5px 8px;
     text-decoration: none;
     color:whitesmoke;
     text-align: center;
     list-style: none;
-}
-
-.comunidad-img {
-    padding: 50px;
-}
-
-.podcast-box {
-    padding: 20px 40px;
 }
 
 /* Breakpoints */
@@ -306,4 +328,9 @@ footer {
     .card-tienda-subtitle {
         text-align: center;
     }
+
+    .veterinaria-img {
+        max-height: 250px;   
+    }
+    
 }
