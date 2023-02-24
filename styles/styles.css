@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color:rgb(246, 237, 225);
+    background-color:rgb(246, 237, 225) !important;
 }
 
 /* Estilos header */
@@ -50,10 +50,11 @@ nav > ul > li > a:hover {
 }
 
 /* Estilos Home */
-
 .title {
     text-align: center;
     padding: 50px 20px;
+    font-size:  1.5em;
+    font-weight: bold;
 }
 
 .home-section {
@@ -117,10 +118,8 @@ nav > ul > li > a:hover {
 }
 
 .veterinaria-total{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    justify-content: space-around;
 }
 
 .veterinaria {
@@ -167,6 +166,14 @@ nav > ul > li > a:hover {
     background-color:transparent;
     color:rgb(141, 15, 34);
     border: solid 2px rgb(141, 15, 34)
+}
+
+.dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+    margin-bottom: 40px;
+}
+
+.dropdown-item:active {
+    background-color: crimson !important;
 }
 
 /* Estilos Tienda */
@@ -293,8 +300,17 @@ footer {
         font-size: 14px;
     }
 
-    h1 {
+    .title {
         font-size:16px;
+    }
+
+    .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .veterinaria p {
+       font-size: 14px;
     }
 }
 
@@ -313,7 +329,7 @@ footer {
         font-size: 14px;
     }
 
-    h1 {
+    .title {
         font-size: 14px;
     }
 
